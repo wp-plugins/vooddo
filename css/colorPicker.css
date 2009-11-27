@@ -1,0 +1,58 @@
+#colorPickerPanel {
+    position : absolute;
+    display : none;
+    z-index : 1001;
+    width : 128px;
+    border : 1px solid black;
+}
+
+#colorPickerPanelHeader {
+    position : relative;
+    height : 22px;
+    padding : 2px 0px 2px 2px;
+    background-color : #ECE9D8;
+    border-bottom : 1px solid black;
+}
+
+#colorPickerClose {
+    position : absolute;
+    display : block;
+    height : 14px;
+    width : 16px;
+    top : 2px;
+    right : 2px;
+    background : transparent url("../img/ico_fermer.gif") no-repeat scroll top right;
+}
+
+#colorPickerTransitionArea {
+    width : 63px;
+    height : 20px;
+    border : 1px solid black;
+}
+
+#colorPickerTable {
+    table-layout : fixed;
+    height : 128px;
+    border : none;
+    border-spacing : 0;
+}
+
+#colorPickerTable tr {
+    height : 2px;
+}
+
+#colorPickerTable td {
+    height : 2px;
+    width : 2px;
+    cursor : crosshair;
+}
+
+.colorPickerElement {
+    position: relative;
+    top: 6px;
+    height : 20px;
+    width : 21px;
+    cursor : pointer;
+    background-image : url("../img/ico_color_picker.gif");
+    display:inline-block;
+}

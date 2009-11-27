@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Vooddo player 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-26 15:36+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: David Voisin <d.voisin@voddnet.com>\n"
+"Language-Team: VodDnet <support@voddnet.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /var/www/wordpress/wp-content/plugins/vooddo\n"
+"X-Poedit-SearchPath-1: /var/www/wordpress/wp-content/plugins/vooddo/lib\n"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/vooddo.php:126
+msgid "This video in your website"
+msgstr "Cette vidéo dans votre site"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:31
+msgid "Descriptor URL"
+msgstr "URL du descripteur"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:33
+msgid "Add"
+msgstr "Ajouter"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:49
+msgid "Update"
+msgstr "Mettre à jour"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:56
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:41
+msgid "Width"
+msgstr "Largeur"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:58
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:48
+msgid "Height"
+msgstr "Hauteur"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:60
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:55
+msgid "Background color"
+msgstr "Couleur de fond"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:14
+msgid "Administration"
+msgstr "Administration"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:28
+msgid "Player"
+msgstr "Lecteur"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:34
+msgid "Vooddo player URL"
+msgstr "URL du lecteur Vooddo"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:37
+msgid "URL of the Vooddo player. Be sure the URL is valid so that the modification occurs."
+msgstr "URL du lecteur Vooddo. Assurez-vous de la validité de l'URL pour que la modification soit effective."
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:44
+msgid "Default player width in pixels."
+msgstr "Largeur du lecteur par défaut en pixels."
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:51
+msgid "Default player height in pixels."
+msgstr "Hauteur du lecteur par défaut en pixels."
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:62
+msgid "Default player background color, use CSS color syntax."
+msgstr "Couleur de fond du lecteur par défaut , utilise la syntaxe de couleur CSS."
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:73
+msgid "Save changes"
+msgstr "Enregistrer les modifications"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:77
+msgid "Editor"
+msgstr "Editeur"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:80
+msgid "Open in full screen"
+msgstr "Ouvrir en plein écran"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:81
+msgid "Open in new tab"
+msgstr "Ouvrir dans un nouvel onglet"
+
+#~ msgid "Delete"
+#~ msgstr "Supprimer"
+#~ msgid "Vooddo player"
+#~ msgstr "Lecteur Vooddo"
+#~ msgid "URL Vooddo player"
+#~ msgstr "URL du lecteur Vooddo"
+
