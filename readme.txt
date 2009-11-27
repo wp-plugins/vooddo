@@ -1,7 +1,7 @@
 === Vooddo ===
 
 Contributors: VodDnet
-Tags: vooddo video player marker hyperlink youtube dailymotion
+Tags: vooddo video player hypervideo  marker hyperlink youtube dailymotion
 Requires at least: 2.8.5
 Tested up to: 2.8.6
 Stable tag: 1.0.0
@@ -10,7 +10,7 @@ Stable tag: 1.0.0
 == Description ==
 
 Vooddo is a new and easy way to enhance your videos.
-You can insert interactive hyperlink markers inside your remote videos, or videos hosted on Youtube or Dailymotion.
+You can insert interactive hyperlink markers within your videos, and even videos hosted by Youtube and Dailymotion.
 
 
 == Features ==
@@ -22,13 +22,13 @@ You can insert interactive hyperlink markers inside your remote videos, or video
 
 == Screenshots ==
 
-Available in plugin directory screenshots.
+Available in the plugin directory "screenshots".
 
 
 == Documentation (french) ==
 
-Plugin manual:  http://www.vooddo.com/plugin-wordpress/doc/vooddo-plugin-wordpress-v1.0.0.pdf
-What is Vooddo: http://www.vooddo.com/plugin-wordpress/doc/Showcase.wmv
+* Plugin manual:  http://www.vooddo.com/plugin-wordpress/doc/vooddo-plugin-wordpress-v1.0.0.pdf
+* What is Vooddo: http://www.vooddo.com/plugin-wordpress/doc/Showcase.wmv
 
 
 == Installation ==

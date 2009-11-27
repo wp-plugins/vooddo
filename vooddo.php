@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: Vooddo
-Description: Mark you videos with dynamic hyperlinks using the powerful Vooddo system.
+Description: Mark your videos with interactive hyperlinks using the powerful Vooddo system.
 Version: 1.0.0
 Author: VodDnet
 Author URI: http://www.voddnet.com
 
  
-Vooddo Video Plugin for Wordpress Copyright 2009  Voddnet  (email : contact@voddnet.com)
+Vooddo Video Plugin for Wordpress Copyright 2009  Voddnet  (email : support@voddnet.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
