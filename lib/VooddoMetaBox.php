@@ -9,22 +9,35 @@ require_once("VooddoVideoDTO.php");
 class VooddoMetaBox
 {
   private $pluginNoncename;
+  private $lastErrorMessage;
   
   
   function __construct()
   {
     $this->pluginNoncename = preg_replace("/[^0-9a-z]/i", "-", VOODDO__PLUGIN_NAME) . "-noncename";
+    $this->lastErrorMessage = get_option(VOODDO__OPTION_NAME__LAST_ERROR_MSG);
 
     add_action('save_post', array(&$this, 'saveData'));
     add_meta_box('vooddo', 'Lecteur Vooddo', array(&$this,'formEditor'), 'post', 'normal', 'high');
   }
   
+  
   function formEditor()
   {
     global $post;
     
+    
     // Compose the editor
-    $html = '<div id="vooddo-metabox">
+    $html = "";
+    
+    if(!empty($this->lastErrorMessage))	// Any error message ?
+    {
+    	$html .= '<div class="vooddo-error-box">' .$this->lastErrorMessage. '</div>';
+    	
+    	delete_option( VOODDO__OPTION_NAME__LAST_ERROR_MSG );
+    }
+    
+    $html .= '<div id="vooddo-metabox">
         <input type="hidden" name="' .$this->pluginNoncename. '" id="' .$this->pluginNoncename. '" value="' . 
         wp_create_nonce( plugin_basename(__FILE__) ) . '" />
         <input type="hidden" name="editor_post_id" value="' .$post->ID. '" />
@@ -41,7 +54,7 @@ class VooddoMetaBox
       $vooddoVideo->initializeFromVooddoString($descriptors[ $i ]);
       
       $backgroundColorPickerName = VOODDO__METABOX_FIELD_NAME__BACKGROUND_COLOR . '_color_picker_' .$i;
-      
+
       $html .= '<table cellpadding="0px" cellspacing="0px">
         <tr>
           <td><strong>' .$vooddoVideo->urlDescriptor. '</strong></td>
@@ -135,6 +148,8 @@ class VooddoMetaBox
         }
       }
     }
+    
+    update_option( VOODDO__OPTION_NAME__LAST_ERROR_MSG, $this->lastErrorMessage );
   }
 
   
@@ -151,17 +166,118 @@ class VooddoMetaBox
   }
   
   
+  /**
+  	@remark parameter vooddoVideo may be modified.
+  */
   private function addNewDescriptor($postId, &$vooddoVideo)
   {
-    $vooddoVideoString = $vooddoVideo->toVooddoString();
-    
     // prevent form inserting twice and check HTTP content type
-    if(!in_array($vooddoVideoString, $this->getDescriptors($postId)) &&
-          getHttpContenttype($vooddoVideo->urlDescriptor, $timeout) == "application/xml")
+    if($this->checkUrlDescriptorExists($postId, $vooddoVideo->urlDescriptor))
     {
-      //echo "<br>Add " .$urlDescriptor;
-      add_post_meta($postId, VOODDO__CUSTOM_FIELD__METAKEY, $vooddoVideoString, false);
+    	$this->lastErrorMessage = sprintf(__("You already added this Vooddo video (descriptor URL: %s) in the post.", VOODDO__PLUGIN_LANG_DOMAIN), 
+    		$vooddoVideo->urlDescriptor);
     }
+    else
+    {
+    	$contentType = getHttpContenttype($vooddoVideo->urlDescriptor, VOODDO__CONNECTION_TIMEOUT_S__READ_HTTP_HEADER);
+    	
+    	if(empty($contentType))
+    	{
+    		$this->lastErrorMessage = sprintf(__("Error, unreachable descriptor URL %s.", VOODDO__PLUGIN_LANG_DOMAIN), 
+	    		$vooddoVideo->urlDescriptor);
+    	}
+    	else if($contentType != "application/xml")
+    	{
+    		$this->lastErrorMessage = sprintf(__("Wrong content-type (%s) for %s. Should be a valid XML file.", VOODDO__PLUGIN_LANG_DOMAIN),
+    		 $contentType, $vooddoVideo->urlDescriptor);
+    	}
+    	else if(!$this->parseDescriptor($vooddoVideo))
+    	{
+    		$this->lastErrorMessage = sprintf(__("Error, %s is not a valid Vooddo descriptor file.", VOODDO__PLUGIN_LANG_DOMAIN), 
+    			$vooddoVideo->urlDescriptor);
+    	}
+		  else
+		  {
+      	//echo "<br>Add " .$urlDescriptor;			  
+			  add_post_meta($postId, VOODDO__CUSTOM_FIELD__METAKEY, $vooddoVideo->toVooddoString(), false);
+		  }
+    }
+  }
+  
+  private function checkUrlDescriptorExists($postId, $urlDescriptor)
+  {
+  	$result = false;
+  
+  	$descriptors = $this->getDescriptors($postId);
+  	foreach($descriptors as $vooddoString)
+  	{
+  		$vooddoVideo = new VooddoVideoDTO();
+  		$vooddoVideo->initializeFromVooddoString($vooddoString);
+  		
+  		if($vooddoVideo->urlDescriptor == $urlDescriptor)
+  		{
+  			$result = true;
+  			break;
+  		}
+  	}
+  	return $result;
+  }
+  
+  /**
+  	@remark parameter vooddoVideo may be modified.
+  */
+  private function parseDescriptor(&$vooddoVideo)
+  {
+  	$success = false;
+  	 
+  	// Call the URL   
+  	$ch = curl_init($vooddoVideo->urlDescriptor);
+	  curl_setopt($ch, CURLOPT_TIMEOUT, VOODDO__CONNECTION_TIMEOUT_S__DOWNLOAD_SMALL_FILE);
+	  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	  curl_setopt($ch, CURLOPT_HEADER, true);
+	  curl_setopt($ch, CURLOPT_NOBODY, false);
+	  $response = curl_exec($ch);
+	  
+	  if(!curl_errno($ch))
+ 		{
+ 			// Read the response
+		  list($header, $body) =  split("\r\n\r\n", $response, 2);
+ 
+	  	// Extract and parse the Vooddo XML 
+		  $parser = xml_parser_create();
+		  xml_parse_into_struct($parser, $body, $vals);
+		  xml_parser_free($parser);
+		  
+		  // Look for CONTAINER node
+		  $containerNode = NULL;
+		  foreach($vals as $node)
+		  {
+		  	if($node["tag"] == "CONTAINER")
+		  	{
+		      $containerNode = $node;
+		      break;
+		  	}
+		  }
+		  
+		  // Set container width and height if available
+		  if($containerNode !== NULL)
+		  {
+		  	$width = $containerNode["attributes"]["WIDTH"];
+		  	$height = $containerNode["attributes"]["HEIGHT"];
+			
+				if(!empty($width))
+					$vooddoVideo->width = $width;
+		
+				if(!empty($height))
+					$vooddoVideo->height = $height;
+
+				$success = true;
+		  }
+	  }
+	 	curl_close($ch);
+  
+	  return $success;
   }
 
 };

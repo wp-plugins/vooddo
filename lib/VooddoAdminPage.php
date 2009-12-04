@@ -108,7 +108,7 @@ class VooddoAdminPage
       }
       
       // Check URL validity
-      if(!$this->checkPlayerUrl($playerUrl, 5))
+      if(!$this->checkPlayerUrl($playerUrl, VOODDO__CONNECTION_TIMEOUT_S__READ_HTTP_HEADER))
       {
         $playerUrl = VOODDO_PLAYER__DEFAULT_URL;
       }

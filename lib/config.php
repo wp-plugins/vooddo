@@ -30,6 +30,8 @@ define("VOODDO__OPTION_NAME__PLAYER_WIDTH", "vooddo_player_width");
 define("VOODDO__OPTION_NAME__PLAYER_HEIGHT", "vooddo_player_height");
 define("VOODDO__OPTION_NAME__PLAYER_BACKGROUND_COLOR", "vooddo_player_background_color");
 define("VOODDO__OPTION_NAME__EDITOR_URL", "vooddo_editor_url");
+define("VOODDO__OPTION_NAME__LAST_ERROR_MSG", "vooddo_last_error_msg");	// Used to pass error message from one page to an other
+
 
 // Player default parameters values
 define("VOODDO_PLAYER__DEFAULT_URL", "http://www.vooddo.com/vooddo.swf");
@@ -60,6 +62,13 @@ define("VOODDO__CUSTOM_FIELD__METAKEY", "vooddo");
 define("VOODDO__PARAM_NAME__WIDTH", "w");
 define("VOODDO__PARAM_NAME__HEIGHT", "h");
 define("VOODDO__PARAM_NAME__BACKGROUND_COLOR", "bg");
+
+
+// Network (generally HTTP) requests timeouts in seconds
+define("VOODDO__CONNECTION_TIMEOUT_S__READ_HTTP_HEADER", 5);
+define("VOODDO__CONNECTION_TIMEOUT_S__DOWNLOAD_SMALL_FILE", 30);
+
+
 
 
 ?>

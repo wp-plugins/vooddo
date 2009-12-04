@@ -2,7 +2,7 @@
 /*
 Plugin Name: Vooddo
 Description: Mark your videos with interactive hyperlinks using the powerful Vooddo system.
-Version: 1.0.0
+Version: 1.1.0
 Author: VodDnet
 Author URI: http://www.voddnet.com
 

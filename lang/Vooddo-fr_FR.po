@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vooddo player 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-26 15:36+0100\n"
+"POT-Creation-Date: 2009-12-04 09:24+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: David Voisin <d.voisin@voddnet.com>\n"
 "Language-Team: VodDnet <support@voddnet.com>\n"
@@ -20,32 +20,52 @@ msgstr ""
 msgid "This video in your website"
 msgstr "Cette vidéo dans votre site"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:31
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:44
 msgid "Descriptor URL"
 msgstr "URL du descripteur"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:33
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:46
 msgid "Add"
 msgstr "Ajouter"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:49
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:62
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:56
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:69
 #: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:41
 msgid "Width"
 msgstr "Largeur"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:58
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:71
 #: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:48
 msgid "Height"
 msgstr "Hauteur"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:60
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:73
 #: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:55
 msgid "Background color"
 msgstr "Couleur de fond"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:177
+#, php-format
+msgid "You already added this Vooddo video (descriptor URL: %s) in the post."
+msgstr "Vous avez déjà ajouté cette vidéo Vooddo (URL du descripteur: %s) dans l'article."
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:186
+#, php-format
+msgid "Error, unreachable descriptor URL %s."
+msgstr "Erreur, vérifier la validité de l'URL %s."
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:191
+#, php-format
+msgid "Wrong content-type (%s) for %s. Should be a valid XML file."
+msgstr "Type de fichier (%s) erroné. S'assurer que %s est un fichier de type XML."
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:196
+#, php-format
+msgid "Error, %s is not a valid Vooddo descriptor file."
+msgstr "Erreur, %s n'est pas un fichier descripteur Vooddo valide."
 
 #: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:14
 msgid "Administration"

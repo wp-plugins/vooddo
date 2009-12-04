@@ -24,3 +24,14 @@
   border: solid 1px #CCC;
 }
 
+.vooddo-error-box
+{
+	background-color: #ffebe8;
+  border: 1px solid #dd3c10;
+  padding: 10px;
+  font-weight: bold;
+	margin-bottom: 1em;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  
+}
