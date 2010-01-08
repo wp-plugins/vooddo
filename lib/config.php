@@ -9,7 +9,7 @@
 
 // Plugin name
 define("VOODDO__PLUGIN_NAME", "Vooddo");
-define("VOODDO__PLUGIN_VERSION", "1.0.0");
+define("VOODDO__PLUGIN_VERSION", "1.5.0");
 
 // Plugin location
 define("VOODDO__PLUGIN_DIR", strtolower(VOODDO__PLUGIN_NAME));
@@ -21,8 +21,13 @@ define("VOODDO__PLUGIN_LANG_DOMAIN", VOODDO__PLUGIN_NAME);
 define("VOODDO__PLUGIN_LANG_DIR", VOODDO__PLUGIN_DIR."/lang");
 
 
-// Editor default URL
-define("VOODDO__EDITOR_URL", "http://www.vooddo.com/editor");
+// Vooddo URLs
+define("VOODDO__URL", "http://www.vooddo.com");
+define("VOODDO__EDITOR_URL", VOODDO__URL."/editor/index.php");
+define("VOODDO__EDITOR_PLAYER_JS", dirname(VOODDO__EDITOR_URL)."/js/VooddoPlayer.js");
+
+define("VOODDO__API_URL__GET_DESCRIPTOR", VOODDO__URL."/api/getDescriptor.php");
+
 
 // Options
 define("VOODDO__OPTION_NAME__PLAYER_URL", "vooddo_player_url");
@@ -45,7 +50,7 @@ define("VOODDO_PLAYER__MIN_HEIGHT", 100);
 
 
 // Metabox
-define("VOODDO__METABOX_FIELD_NAME__DESCRIPTOR_URL", "vooddo_new_descriptor");
+define("VOODDO__METABOX_FIELD_NAME__DESCRIPTOR_ID", "vooddo_new_descriptor");
 define("VOODDO__METABOX_FIELD_NAME__WIDTH", "vooddo_player_width");
 define("VOODDO__METABOX_FIELD_NAME__HEIGHT", "vooddo_player_height");
 define("VOODDO__METABOX_FIELD_NAME__BACKGROUND_COLOR", "vooddo_player_background_color");

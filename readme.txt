@@ -2,9 +2,9 @@
 
 Contributors: VodDnet
 Tags: vooddo video player hypervideo  marker hyperlink youtube dailymotion
-Requires at least: 2.8.5
-Tested up to: 2.8.6
-Stable tag: 1.1.0
+Requires at least: 2.8.9
+Tested up to: 2.8.9
+Stable tag: 1.5.0
 
 
 == Description ==
@@ -39,10 +39,16 @@ Available in the plugin directory "screenshots".
 
 
 == Changelog ==
+= 1.5.0 =
+* Compatible with the new Vooddo external API and accepts the new Vooddo ID system.
+* Vooddo can be loaded in a new Vooddo Editor browser window or tab.
+* Simplified the administration interface.
 
 = 1.1.0 =
+* DOES NOT WORK ANYMORE !!
 * Automatically sets Vooddo video width and height using descriptor data when added in post.
 * Errors messages management inside the metabox.
 
 = 1.0.0 =
+* DOES NOT WORK ANYMORE !!
 * Initial release.

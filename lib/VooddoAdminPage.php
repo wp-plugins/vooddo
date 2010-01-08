@@ -73,19 +73,8 @@ class VooddoAdminPage
               <input name="Submit" class="button-primary" value="' .__("Save changes", VOODDO__PLUGIN_LANG_DOMAIN). '" type="submit">
             </p>
           </form>
-          
-          <h3>' .__("Editor", VOODDO__PLUGIN_LANG_DOMAIN). '</h3>
-          <p style="background:#111;width:820px;border:solid 2px #999">
-            &nbsp;
-            <a style="color:#CCC;bold;text-decoration:none" href="' .VOODDO__EDITOR_URL. '">[ ' .__("Open in full screen", VOODDO__PLUGIN_LANG_DOMAIN). ' ]</a>
-            <a style="color:#CCC;text-decoration:none" href="' .VOODDO__EDITOR_URL. '" target="vooddo-editor">[ ' .__("Open in new tab", VOODDO__PLUGIN_LANG_DOMAIN). ' ]</a>
-            <br />
-            <iframe src="' .VOODDO__EDITOR_URL. '" width="820px" height="580px" />
-          </p>
 
         </div>';
-    
-    // Add Vooddo editor here
     
     return $html;
   }

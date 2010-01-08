@@ -8,14 +8,14 @@ require_once("functions.php");
 */
 class VooddoVideoDTO
 {
-  var $urlDescriptor;
+  var $idDescriptor;
   var $width;
   var $height;
   var $backgroundColor;
   
   function __construct()
   {
-    $this->urlDescriptor = "";
+    $this->idDescriptor = "";
     $this->width = get_option(VOODDO__OPTION_NAME__PLAYER_WIDTH);
     $this->height = get_option(VOODDO__OPTION_NAME__PLAYER_HEIGHT);
     $this->backgroundColor = get_option(VOODDO__OPTION_NAME__PLAYER_BACKGROUND_COLOR);
@@ -23,8 +23,8 @@ class VooddoVideoDTO
   
   function initializeFromVooddoString($vooddoString)
   {
-    list($urlDescriptor, $parametersString) = split("[\{\}]", $vooddoString);
-    $this->urlDescriptor = trim($urlDescriptor);
+    list($idDescriptor, $parametersString) = split("[\{\}]", $vooddoString);
+    $this->idDescriptor = trim($idDescriptor);
     $parametersString = trim($parametersString);
 
     if(!empty($parametersString))
@@ -39,7 +39,7 @@ class VooddoVideoDTO
   
   function toVooddoString()
   {
-    $vooddoString = $this->urlDescriptor;
+    $vooddoString = $this->idDescriptor;
     $vooddoString .= ' { ';
     $vooddoString .= VOODDO__PARAM_NAME__WIDTH. ' = ' .$this->width. '; ';
     $vooddoString .= VOODDO__PARAM_NAME__HEIGHT. ' = ' .$this->height. '; ';
