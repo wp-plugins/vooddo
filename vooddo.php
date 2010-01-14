@@ -2,7 +2,7 @@
 /*
 Plugin Name: Vooddo
 Description: Mark your videos with interactive hyperlinks using the powerful Vooddo system.
-Version: 1.5.0
+Version: 1.5.1
 Author: VodDnet
 Author URI: http://www.voddnet.com
 
@@ -39,8 +39,6 @@ load_plugin_textdomain( VOODDO__PLUGIN_LANG_DOMAIN, "wp-content/plugins/" .VOODD
 // Initialize the options values
 add_action("init", "vooddo_install");
 
-// Plugin links
-add_filter("plugin_row_meta", "vooddo_plugin_links", 10);
 
 // Include the CSS and Javascript
 add_action('wp_head', 'vooddo_include');
@@ -72,16 +70,6 @@ function vooddo_install()
   add_option(VOODDO__OPTION_NAME__PLAYER_BACKGROUND_COLOR, VOODDO_PLAYER__DEFAULT_BACKGROUND_COLOR);
 }
 
-
-/**
-  Plugin links
-*/
-function vooddo_plugin_links($links)
-{
-	$links[] = '<a href="http://www.vooddo.com/plugin-wordpress/doc/vooddo-plugin-wordpress-v1.0.0.pdf">Documentation</a>';
-	$links[] = '<a href="http://www.vooddo.com/plugin-wordpress/doc/Showcase.wmv">Demo Vooddo</a>';
-	return $links;
-}
 
 
 /**

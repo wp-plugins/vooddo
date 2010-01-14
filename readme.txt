@@ -2,9 +2,9 @@
 
 Contributors: VodDnet
 Tags: vooddo video player hypervideo  marker hyperlink youtube dailymotion
-Requires at least: 2.8.9
-Tested up to: 2.8.9
-Stable tag: 1.5.0
+Requires at least: 2.9
+Tested up to: 2.9.1
+Stable tag: 1.5.1
 
 
 == Description ==
@@ -22,7 +22,7 @@ You can insert interactive hyperlink markers within your videos, and even videos
 
 == Screenshots ==
 
-Available in the plugin directory "screenshots".
+Coming soon.
 
 
 == Documentation (french) ==
@@ -39,6 +39,10 @@ Available in the plugin directory "screenshots".
 
 
 == Changelog ==
+= 1.5.1 =
+* Possibility to create directly a new Vooddo using a video public URL.
+* Simplified the Metabox interface.
+
 = 1.5.0 =
 * Compatible with the new Vooddo external API and accepts the new Vooddo ID system.
 * Vooddo can be loaded in a new Vooddo Editor browser window or tab.

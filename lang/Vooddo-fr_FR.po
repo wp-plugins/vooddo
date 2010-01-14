@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vooddo player 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-06 14:28+0100\n"
+"POT-Creation-Date: 2010-01-14 09:44+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: David Voisin <d.voisin@voddnet.com>\n"
 "Language-Team: VodDnet <support@voddnet.com>\n"
@@ -20,64 +20,63 @@ msgstr ""
 msgid "This video in your website"
 msgstr "Cette vidéo dans votre site"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:44
-msgid "New Vooddo ID"
-msgstr "Nouvel ID Vooddo"
-
 #: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:47
+msgid "URL video"
+msgstr "Vidéo URL"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:52
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:73
 msgid "Add"
 msgstr "Ajouter"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:48
-msgid "Add exisiting Vooddo into the post by passing its ID"
-msgstr "AJouter un Vooddo existant à partir de son ID"
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:53
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:60
+msgid "Add new Vooddo into the post using a public video URL"
+msgstr "Ajouter un Vooddo existant dans l'article depuis son URL publique"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:63
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:68
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:99
 msgid "Vooddo ID"
 msgstr "Vooddo ID"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:69
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:74
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:81
+msgid "Add exisiting Vooddo into the post by passing its ID"
+msgstr "Ajouter un Vooddo existant à partir de son ID"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:105
+msgid "Watch the Vooddo video"
+msgstr "Visionner la vidéo Vooddo"
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:110
 msgid "Modify in Vooddo Editor"
 msgstr "Modifier depuis l'Editeur Vooddo"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:73
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:114
 msgid "Remove from post"
 msgstr "Supprimer de l'article"
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:79
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:41
-msgid "Width"
-msgstr "Largeur"
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:249
+#, php-format
+msgid "Can not put video at URL : %s into a Vooddo video."
+msgstr "Impossible de créer une vidéo Vooddo depuis l'URL : %s."
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:81
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:48
-msgid "Height"
-msgstr "Hauteur"
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:261
+#, php-format
+msgid "Invalid descriptor format for the new Vooddo ID %s."
+msgstr "Le format du descripteur n'est pas valide pour le nouvel ID Vooddo %s."
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:83
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:55
-msgid "Background color"
-msgstr "Couleur de fond"
-
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:93
-msgid "Submit"
-msgstr "Valider"
-
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:94
-msgid "Submit the new parameters values"
-msgstr "Valider les nouvelles valeurs des paramètres"
-
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:193
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:280
 #, php-format
 msgid "You already added this Vooddo (ID : %s) in the post."
 msgstr "Vous avez déjà ajouté cette vidéo Vooddo (ID : %s) dans l'article."
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:202
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:289
 #, php-format
 msgid "No descriptor available for the Vooddo ID %s."
 msgstr "Pas de descripteur disponible pour l'ID Vooddo %s."
 
-#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:207
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoMetaBox.php:294
 #, php-format
 msgid "Invalid descriptor format for the Vooddo ID %s."
 msgstr "Le format du descripteur n'est pas valide pour l'ID Vooddo %s."
@@ -98,13 +97,25 @@ msgstr "URL du lecteur Vooddo"
 msgid "URL of the Vooddo player. Be sure the URL is valid so that the modification occurs."
 msgstr "URL du lecteur Vooddo. Assurez-vous de la validité de l'URL pour que la modification soit effective."
 
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:41
+msgid "Width"
+msgstr "Largeur"
+
 #: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:44
 msgid "Default player width in pixels."
 msgstr "Largeur du lecteur par défaut en pixels."
 
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:48
+msgid "Height"
+msgstr "Hauteur"
+
 #: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:51
 msgid "Default player height in pixels."
 msgstr "Hauteur du lecteur par défaut en pixels."
+
+#: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:55
+msgid "Background color"
+msgstr "Couleur de fond"
 
 #: /var/www/wordpress/wp-content/plugins/vooddo/lib/VooddoAdminPage.php:62
 msgid "Default player background color, use CSS color syntax."
@@ -114,6 +125,12 @@ msgstr "Couleur de fond du lecteur par défaut , utilise la syntaxe de couleur C
 msgid "Save changes"
 msgstr "Enregistrer les modifications"
 
+#~ msgid "New Vooddo ID"
+#~ msgstr "Nouvel ID Vooddo"
+#~ msgid "Submit"
+#~ msgstr "Valider"
+#~ msgid "Submit the new parameters values"
+#~ msgstr "Valider les nouvelles valeurs des paramètres"
 #~ msgid "Editor"
 #~ msgstr "Editeur"
 #~ msgid "Open in full screen"
